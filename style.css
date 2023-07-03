@@ -1,0 +1,335 @@
+:root {
+  --main-color: #b22222;
+  --text-color: #171427;
+  --hospital-green: #ACD9B2;
+  --text-colorSecondary: #fff;
+  --very-light-pink: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+section {
+  padding: 1rem 0 2rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--main-color);
+  z-index: 100;
+}
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.icon_menu {
+  font-size: 1.8rem;
+  color: var(--text-colorSecondary);
+  font-weight: 400;
+}
+.logo-Yardsale {
+  width: 150px;
+}
+#icon-cart {
+  font-size: 1.8rem;
+  color: var(--text-colorSecondary);
+  cursor: pointer;
+}
+.header__cart--notification {
+  display: none;
+  background-color: var(--hospital-green);
+  width: 15px;
+  height: 15px;
+  border-radius: 16px;
+  position: absolute;
+  top: 15px;
+  font-size: 0.7em;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.nav-menu-mobile { /* cambiar none por flex en js*/
+  display: none;
+  margin-top: 60px;
+  width: 100%;
+}
+.close-nav {
+  display: block;
+  position: relative;
+  left: 90%;
+  top: 12px;
+  color: var(--main-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav_menu-mobile ul {
+  margin-left: 12px;
+} 
+.navbar_list {
+  list-style: none;
+  margin: 18px 18px 40px;
+  display: flex;
+  text-align: center;
+}
+.icon_nav-mobile {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 5px;
+  left: -10px;
+}
+.navbar__link {
+  margin-top: 8px;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-black);
+}
+.navbar__link:hover, .navbar__link:active {
+  color: var(--hospital-green);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--text-colorSecondary);
+  box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+  transition: 0.4s;
+}
+.cart.active {
+  right: 0;
+}
+.cart-content {
+  overflow: scroll;
+  height: 420px;
+}
+.shop {
+  margin-top: 2rem;
+}
+.product-img  {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.shop-content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+  justify-content: center;
+  gap: 15px;
+}
+.product-box {
+  position: relative;
+  padding: 15px;
+}
+.price {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.add-cart {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  background-color: var(--hospital-green);
+  color: var(--text-color);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 10px;
+}
+.add-cart:hover, .add-cart:active {
+  background-color: #ACD9c9;
+  color: var(--text-colorSecondary);
+} 
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+.details-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.cart-product-title {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.cart-price {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.cart-quantity {
+  cursor: pointer;
+  border: 1px solid var(--text-color);
+  outline-color: var(--main-color);
+  width: 2.8rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.cart-remove {
+  color: var(--main-color);
+  font-size: 24px;
+  cursor: pointer;
+}
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.3rem;
+  border-top: 1px solid var(--text-color);
+  padding: 10px;
+}
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.total-price {
+  margin-left: 0.5rem;
+}
+.btn-buy {
+  background-color: var(--hospital-green);
+  color: var(--text-color);
+  padding: 12px 18px;
+  margin-top: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+}
+.btn-buy:hover, .btn-buy:active {
+  color: var(--text-colorSecondary);
+  background-color: #ACD9c9;
+}
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 1.3rem;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+}
+.product-detail-carrito {
+  width: 320px;
+  height: auto;
+  padding: 5px;
+  margin: 30px 20px;
+}
+.main-product {
+  width: 100%;
+  height: 100px;
+}
+.product_info-main {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.description-product_main {
+  text-align: center;
+  margin: 10px;
+  font-size: 1.2rem;
+  color: var(--very-light-pink);
+  font-weight: bold;
+}
+.shipping {
+  background-color: var(--main-color);
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  width: 140px;
+  border-radius: 15px;
+  margin: 20px 0;
+  padding: 5px;
+  color: var(--text-colorSecondary);
+}
+.add-to-cart-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  border: none;
+  background-color: var(--hospital-green);
+  color: var(--text-color);
+  border-radius: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}
+.add-to-cart-button:hover, .add-to-cart-button:active  {
+  background-color: #ACD9c9;
+  color: var(--text-colorSecondary);
+}
+.cards-container img {
+  width: 100%;
+  height: auto;
+}
+
+.add-to-cart-button {
+  width: 60px;
+    height: 60px;
+    position: relative;
+    bottom: 0;
+}
+@media screen and (max-width: 320px) {
+  .cart {
+    width: 100%;
+  }
+  .cart-content {
+    height: 420px;
+  }
+}
