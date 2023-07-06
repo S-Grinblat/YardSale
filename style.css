@@ -40,6 +40,7 @@ header {
   font-size: 1.8rem;
   color: var(--text-colorSecondary);
   font-weight: 400;
+  cursor: pointer;
 }
 .logo-Yardsale {
   width: 150px;
@@ -117,7 +118,7 @@ header {
   right: -100%;
   width: 360px;
   min-height: 100vh;
-  padding: 20px;
+  padding: 10px;
   background: var(--text-colorSecondary);
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
   transition: 0.4s;
@@ -127,7 +128,7 @@ header {
 }
 .cart-content {
   overflow: scroll;
-  height: 420px;
+  height: 465px;
 }
 .shop {
   margin-top: 2rem;
@@ -152,6 +153,8 @@ header {
 .product-box {
   position: relative;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 .price {
   font-size: 1.1rem;
@@ -212,7 +215,6 @@ header {
   display: grid;
   grid-template-columns: 32% 50% 18%;
   align-items: center;
-  gap: 1rem;
   margin-top: 1rem;
 }
 .detail-box {
@@ -278,6 +280,34 @@ header {
   font-size: 1.6rem;
   font-weight: bold;
 }
+.description{
+  color: #888;
+  font-size: 1.1rem;
+  display: flex;
+}
+.description .arrowDown {
+  color: #ACD9c9;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.description .arrowUp {
+  color: #ACD9C9;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  display: none;
+}
+.descripiton-details {
+  display: none;
+}
+.descripiton-container p {
+  font-size: .9rem;
+  color: #171427;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .description-product_main {
   text-align: center;
   margin: 10px;
@@ -330,6 +360,6 @@ header {
     width: 100%;
   }
   .cart-content {
-    height: 420px;
+    height: 380px;
   }
 }

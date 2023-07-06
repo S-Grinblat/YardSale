@@ -8,6 +8,10 @@ const menuLinks = document.querySelector('.nav-menu-mobile');
 const shopContainer = document.querySelector('.shop');
 const addCart = document.querySelector('.add-cart');
 const shopContent = document.querySelector('.shop-content');
+const containerDescription = document.querySelector('.description-container');
+const description = document.querySelectorAll('.descripiton-details');
+const arrowDown = document.querySelectorAll('.arrowDown');
+const arrowUp = document.querySelectorAll('.arrowUp');
 let userInputNumber = 1;
 let totalInputNumber = userInputNumber;
 
@@ -28,6 +32,24 @@ closeCart.addEventListener('click', () => {
   cartMenu.classList.remove('active');
 })
 
+arrowDown.forEach(function(openDescription, index) {
+  openDescription.addEventListener('click', function() {
+    if(index < description.length) {
+      description[index].style.display = 'block';
+      arrowUp[index].style.display = 'block';
+      arrowDown[index].style.display = 'none';
+    }
+  })
+})
+arrowUp.forEach(function(closeDescription, item) {
+  closeDescription.addEventListener('click', function() {
+    if(item < description.length) {
+      description[item].style.display = 'none';
+      arrowUp[item].style.display = 'none';
+      arrowDown[item].style.display = 'block';
+    }
+  })
+})
 
 if(document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready) 
