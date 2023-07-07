@@ -17,6 +17,9 @@
 section {
   padding: 1rem 0 2rem;
 }
+.show {
+  display: none;
+}
 header {
   position: fixed;
   top: 0;
@@ -216,6 +219,16 @@ header {
   grid-template-columns: 32% 50% 18%;
   align-items: center;
   margin-top: 1rem;
+}
+.cart-empty {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+
 }
 .detail-box {
   display: grid;

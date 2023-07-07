@@ -1,6 +1,8 @@
 const cartIcon = document.getElementById('icon-cart');
 let cartNotification = document.querySelector('.header__cart--notification');
 const cartMenu = document.querySelector('.cart');
+const productsInCart = document.querySelector('.cart-content');
+const cartEmpty = document.querySelector('.cart-empty');
 const closeCart = document.getElementById('close-cart');
 const logoMenu = document.querySelector('.icon_menu');
 const closeMenu = document.querySelector('.close-nav');
@@ -27,9 +29,15 @@ closeMenu.addEventListener('click', () => {
 cartIcon.addEventListener('click', () => {
   cartMenu.classList.add('active');
   menuLinks.style.display = 'none';
+  if(totalInputNumber == 1){
+      cartEmpty.style.display = 'block';
+  } else {
+    cartEmpty.style.display = 'none';
+  }
 });
 closeCart.addEventListener('click', () => {
   cartMenu.classList.remove('active');
+  productsInCart.innerHTML.description = '';
 })
 
 arrowDown.forEach(function(openDescription, index) {
